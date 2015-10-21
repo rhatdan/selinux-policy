@@ -1336,6 +1336,24 @@ interface(`virt_transition_svirt_sandbox',`
 
 ########################################
 ## <summary>
+##	Read the process state of virt sandbox containers
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`virt_sandbox_read_state',`
+	gen_require(`
+		attribute svirt_sandbox_domain;
+	')
+
+	ps_process_pattern($1, svirt_sandbox_domain)
+')
+
+########################################
+## <summary>
 ##	Read and write to svirt_image devices.
 ## </summary>
 ## <param name="domain">
