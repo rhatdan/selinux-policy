@@ -197,8 +197,9 @@ optional_policy(`
 	role xguest_r types mozilla_t;
 ')
 
-gen_user(xguest_u, user, xguest_r, s0, s0)
-
 optional_policy(`
         user_typebounds(xguest_t)
 ')
+
+gen_user(xguest_u, user, xguest_r, s0, s0)
+
