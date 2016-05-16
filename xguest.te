@@ -198,3 +198,7 @@ optional_policy(`
 ')
 
 gen_user(xguest_u, user, xguest_r, s0, s0)
+
+optional_policy(`
+        user_typebounds(xguest_t)
+')
