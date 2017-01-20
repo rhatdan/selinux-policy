@@ -194,6 +194,7 @@ optional_policy(`
 
 optional_policy(`
 	container_runtime_entrypoint(unconfined_t)
+	container_runtime_run(unconfined_t, unconfined_r)
 ')
 
 optional_policy(`
